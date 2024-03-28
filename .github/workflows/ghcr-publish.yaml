@@ -48,10 +48,7 @@ jobs:
 
       - name: Docker push
         run: |
-          docker push \
-            -t ghcr.io/${{ github.repository_owner }}/networktools:latest \
-            -t ghcr.io/${{ github.repository_owner }}/networktools:latest-ci \
-            -t ghcr.io/${{ github.repository_owner }}/networktools:${{ github.sha }}
+          docker push ghcr.io/${{ github.repository_owner }}/networktools --all-tags
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
