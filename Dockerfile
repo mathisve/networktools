@@ -16,6 +16,7 @@ RUN apk add --no-cache \
     openssl \
     curl \
     iputils-ping \
-    nano
+    nano \
+    speedtest-cli
 
 CMD ["/bin/bash", "--login"]
